@@ -443,8 +443,14 @@
   </div>
   <div class="section-label">Data</div>
   <div class="card">
-    <div style="font-size:13px;color:var(--text2);margin-bottom:12px">Your data is saved locally on this device. Use the button below if you want to start completely fresh.</div>
-    <button class="btn-secondary" style="width:100%;color:var(--red);border-color:var(--red)" onclick="clearAllData()">Clear all data</button>
+<div style="font-size:13px;color:var(--text2);margin-bottom:12px">Your data is saved locally on this device. Export it as a backup before clearing Safari history.</div>
+    <button class="btn-primary" onclick="exportData()" style="margin-bottom:8px">Export my data as CSV</button>
+    <div style="margin-bottom:8px">
+      <label style="font-size:13px;color:var(--text2);display:block;margin-bottom:6px">Import from backup CSV</label>
+      <input type="file" id="import-file" accept=".csv" onchange="importData(this)" style="font-size:13px;color:var(--text2);width:100%">
+    </div>
+    <button class="btn-secondary" style="width:100%;color:var(--red);border-color:var(--red);margin-top:4px" onclick="clearAllData()">Clear all data</button>
+  
   </div>
 </div>
 <nav class="tab-bar">
